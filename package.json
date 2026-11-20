@@ -1,0 +1,13 @@
+{
+  "name": "marketuz",
+  "version": "1.0.0",
+  "description": "Uzum Market uslubidagi e-commerce platforma (Pure HTML, CSS, Vanilla JS)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["ecommerce", "marketplace", "uzum", "marketuz", "vanillajs"],
+  "author": "",
+  "license": "MIT"
+}

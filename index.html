@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MarketUz — Tezkor va qulay internet-do'kon</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER CONTAINER -->
+  <div id="header-container"></div>
+
+  <!-- ASOSIY MAZMUN -->
+  <main class="container">
+    <!-- BANNER KARUSEL -->
+    <section class="banner-carousel" id="banner-carousel">
+      <div class="carousel-track" id="carousel-track">
+        <!-- Slayd 1 -->
+        <div class="carousel-slide slide-bg-1">
+          <div class="slide-content">
+            <span class="slide-tag">Katta chegirmalar</span>
+            <h1 class="slide-title">Mavsumiy super chegirmalar haftaligi!</h1>
+            <p class="slide-subtitle">Eng talabgir elektronika va maishiy texnikalarga 50% gacha tejab qoling</p>
+            <a href="catalog.html?filter=discounts" class="slide-btn">
+              <span>Xarid qilish</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Slayd 2 -->
+        <div class="carousel-slide slide-bg-2">
+          <div class="slide-content">
+            <span class="slide-tag">1 kunda yetkazish</span>
+            <h2 class="slide-title">Eshigingizgacha bepul va tez yetkazamiz</h2>
+            <p class="slide-subtitle">MarketUz bilan barcha buyurtmalar ertagayoq qo'lingizda bo'ladi</p>
+            <a href="catalog.html" class="slide-btn">
+              <span>Katalogga o'tish</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Slayd 3 -->
+        <div class="carousel-slide slide-bg-3">
+          <div class="slide-content">
+            <span class="slide-tag">Smart Gadjetlar</span>
+            <h2 class="slide-title">Smartfonlar va aqlli soatlar dunyosi</h2>
+            <p class="slide-subtitle">Original flagman modellar va aksessuarlar rasmiy kafolat bilan</p>
+            <a href="catalog.html?category=elektronika" class="slide-btn">
+              <span>Tanlash</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Slayd 4 -->
+        <div class="carousel-slide slide-bg-4">
+          <div class="slide-content">
+            <span class="slide-tag">Shinam Xonadon</span>
+            <h2 class="slide-title">Oshxona va uy-ro'zg'or jihozlari</h2>
+            <p class="slide-subtitle">Idish-tovoqlar, qulay tozalash anjomlari va qulay narxlar</p>
+            <a href="catalog.html?category=uy-rozgor" class="slide-btn">
+              <span>Ko'rish</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Karusel boshqaruv tugmalari -->
+      <button class="carousel-btn carousel-btn-prev" onclick="carouselPrev()" aria-label="Oldingi slayd">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="carousel-btn carousel-btn-next" onclick="carouselNext()" aria-label="Keyingi slayd">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+
+      <!-- Nuqtalar (Dots) -->
+      <div class="carousel-dots">
+        <div class="carousel-dot active" onclick="carouselGoTo(0)"></div>
+        <div class="carousel-dot" onclick="carouselGoTo(1)"></div>
+        <div class="carousel-dot" onclick="carouselGoTo(2)"></div>
+        <div class="carousel-dot" onclick="carouselGoTo(3)"></div>
+      </div>
+    </section>
+
+    <!-- KATEGORIYALAR GORIZONTAL QATORI -->
+    <section class="category-pills-wrap">
+      <div class="category-pills no-scrollbar" id="category-pills"></div>
+    </section>
+
+    <!-- 1. CHEGIRMALAR BO'LIMI -->
+    <section class="section-block">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span style="color: var(--badge-red);">🔥</span>
+          <span>Katta chegirmalar</span>
+        </h2>
+        <a href="catalog.html?filter=discounts" class="section-more-link">
+          <span>Barchasi</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+      <div class="products-grid" id="discounts-grid"></div>
+    </section>
+
+    <!-- 2. OMMABOP MAHSULOTLAR BO'LIMI -->
+    <section class="section-block">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span style="color: #F59E0B;">⭐</span>
+          <span>Ommabop mahsulotlar</span>
+        </h2>
+        <a href="catalog.html?sort=popular" class="section-more-link">
+          <span>Barchasi</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+      <div class="products-grid" id="popular-grid"></div>
+    </section>
+
+    <!-- 3. YANGI KELGANLAR BO'LIMI -->
+    <section class="section-block">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span style="color: var(--primary);">✨</span>
+          <span>Yangi kelganlar</span>
+        </h2>
+        <a href="catalog.html?sort=newest" class="section-more-link">
+          <span>Barchasi</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+      <div class="products-grid" id="new-grid"></div>
+    </section>
+  </main>
+
+  <!-- FOOTER & BOTTOM NAV -->
+  <div id="footer-container"></div>
+  <div id="bottom-nav-container"></div>
+
+  <!-- SKRIPTLAR -->
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/home.js"></script>  
+</body>
+</html>
